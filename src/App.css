@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  text-align: center;
+  margin: 50px auto 0px;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  height: 470px;
+  padding: 20px 15px;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  background-color: #5e17eb;
+  width: 100vw;
+  padding-bottom: 5px;
+}
+.logo img {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+}
+
+header ul {
+  float: right;
+  list-style-type: none;
+  padding: 0 50px;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+header ul li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.search-engine {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.search-engine input {
+  width: 50%;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-size: 16px;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  outline: none;
+  background-color: #fff;
+  color: #555555;
+}
+
+.search-engine button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 8px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.search-engine button:hover {
+  box-shadow:
+    rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+    #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.search-engine button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.suggestions {
+  position: absolute;
+  top: 50px;
+  left: 115px;
+  text-align: left;
+  list-style-type: none;
+  padding: 0 10px 0 15px;
+  width: 50%;
+  margin: 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions li:hover,
+.suggestions li.highlighted {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.city-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.loading {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bolder;
+  color: #000;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.temp {
+  font-size: 64px;
+  color: #000;
+  font-weight: bold;
+}
+
+.temp-values {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.temp-values span {
+  display: inline-block;
+}
+
+.description {
+  color: #000000;
+  font-size: 25px;
+  font-weight: 650;
+  text-transform: capitalize;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  line-height: 1px;
+}
+
+footer {
+  background-color: #5e17eb;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 578px) {
+  .logo img {
+    height: 65px;
+  }
+
+  header ul {
+    margin-right: -20px;
+  }
+
+  header ul li {
+    margin: 0;
+    padding: 8px;
+  }
+
+  .suggestions {
+    left: 53px;
+  }
+}
